@@ -1,0 +1,77 @@
+<ion-modal-view on-swipe-down="closeModal()">
+
+    <!--content-->
+    <ion-content class="greyBackground modalView no-header has-footer" scroll="true" has-bouncing="false" padding="false">
+        
+
+  <!--Toolbar buttons-->
+     <div class="content">
+        <div class="outer">
+        <md-button class="inner button modalLeftToolbarButton  {{tColor}} md-fab circularButton ion-android-arrow-back" ng-click="closeModal()">
+           <!-- <i class="ion-android-arrow-back"></i>--> 
+        </md-button>
+
+        <md-button class="inner button modalRightToolbarButton  {{tColor}} md-fab circularButton ion-android-more-vertical" ng-click="popover.show($event)">
+            <!--<i class="ion-android-more-vertical"></i>-->
+        <md-button>
+
+            </div>
+      </div>
+
+
+        <!--Nav buttons-->
+        <div class="content">
+        <div class="outer">
+        <md-button class="inner button modalLeftNavButton {{tColor}} md-fab circularButton ion-ios-arrow-back" ng-click="previousSlide()">
+           <!-- <i class="ion-ios-arrow-back"></i>-->
+        </md-button>
+
+        <md-button class="inner button modalRightNavButton {{tColor}} md-fab circularButton ion-ios-arrow-forward" ng-click="nextSlide()">
+          <!--  <i class="ion-ios-arrow-forward"></i>-->
+        </md-button>
+
+            </div>
+      </div>
+      
+        
+        <ion-slide-box on-slide-changed="slideChanged($index)" show-pager="false">
+
+            <ion-slide ng-repeat="slide in alphabetsItems[current]">
+
+<!--                <div class="list card modalCard">-->
+                <div class="modalCard">
+
+<!--                    <div class="item {{bkColor}} item-body cardList">-->
+                    <div class="{{bkColor}} cardList cardModal">
+                        <img ng-src="img/{{slide.img}}" class="cardModalImg" 
+                             alt="{{title}}">
+                    </div>
+                </div>
+
+            </ion-slide>
+
+        </ion-slide-box>
+
+    </ion-content>
+
+    <!--Progress bar-->
+    <div class="progress-bar {{pOutColor}}">
+        <div class="increment {{pInColor}}"></div>
+    </div>
+
+    <!--Floating action button-->
+   <!-- <button class="button button-float-sound" ng-click="">
+        <i class="ion-play"></i>
+    </button>-->
+             
+    <!--<md-button class="md-fab md-fab-bottom-right button-float-white pushFeel fx-zoom-normal fx-easing-elastic fx-speed-1200" ng-click="" ng-show="showPlay">-->
+    <md-button class="md-fab md-fab-bottom-right button-float-white fabButtonShadowActive fabButtonScaleActive fabButtonAnimZoomIn" ng-click="" ng-show="showPlay">
+            <i class="ion-play"></i>
+    </md-button>
+
+    <!--Footer-->
+    <div class="bar bar-footer {{ftColor}}">
+        <h2 class="title {{tColor}}">{{title}}</h2>
+    </div>
+
+</ion-modal-view>

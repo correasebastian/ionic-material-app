@@ -1,0 +1,23 @@
+
+<ion-view class="greyBg" hide-nav-bar="true" cache-view="false">
+
+   
+    <ion-content class="" scroll="false" has-bouncing="false">
+
+    <md-radio-group ng-model="data.group1" ng-init="data.group1=yey" ng-change="hello()">
+        <md-radio-button value="Apple">Apple</md-radio-button>
+        <md-radio-button value="Banana"> Banana </md-radio-button>
+        <md-radio-button value="Mango">Mango</md-radio-button>
+    </md-radio-group>
+        
+    </ion-content>
+
+    <!--Floating action button-->
+    <md-button class="md-fab md-fab-bottom-right button-float-green fabButtonAnimZoomIn fabButtonShadowActive fabButtonScaleActive" ui-sref="app.home" ng-show="showProceed">
+            <i class="ion-checkmark-round"></i>
+    </md-button>
+
+    <!--Footer-->
+    <div class="bar bar-footer greyFt">
+    </div>
+</ion-view>

@@ -1,0 +1,75 @@
+
+<ion-view class="greyBackground" cache-view="false">
+    
+    <!--nav-buttons-->
+    <ion-nav-buttons side="left">
+        <button class="button button-icon" menu-and-drawer-toggle>
+            <i class="ion-navicon headerButtonIcon"></i>
+            <h1 class="headerTitle">Animals for toddlers</h1>
+        </button>
+        
+    </ion-nav-buttons>
+  
+
+    <!--content-->
+    <ion-content fab class="has-header" scroll="true" has-bouncing="true" header-shrink scroll-event-interval="5">
+        <div style="height: 64px;"></div>
+
+        <div class="row"> 
+            
+            <div class="col {{itemCards[$index].width}} colPadding fx-fade-down fx-easing-bounce fx-speed-1500" ng-repeat="col in cards track by $index">
+                
+                <div class="list card" ng-click="openModal({{itemCards[$index].idx}},{{'itemCards[$index].bcolor'}},{{'itemCards[$index].fcolor'}},{{'itemCards[$index].tcolor'}},{{'itemCards[$index].progressOutColor'}},{{'itemCards[$index].progressInColor'}})">
+
+
+                    <div class="item {{itemCards[$index].bcolor}} item-body cardList cardHeightHome">
+                        <img ng-src="img/{{itemCards[$index].img}}" class="cardImg" alt="{{itemCards[$index].img}}">
+                    </div>
+
+
+                    <div class="item item-icon-right {{itemCards[$index].fcolor}} cardListBorder {{itemCards[$index].tcolor}}">
+                        <i class="icon ion-ios-paw"></i>
+                        {{itemCards[$index].title}}
+                    </div>
+
+
+                </div>
+    
+            </div>
+        </div>
+    </ion-content>
+    
+    
+    <md-button class="md-fab md-fab-pos-4 md-mini fabButtonslideInUpEntry-4" ng-if="showMiniButton" ng-click="">
+        <md-tooltip id="tooltip_4" md-visible="tooltip4">
+                MORE
+        </md-tooltip>
+            <i class="ion-android-playstore"></i>
+    </md-button>
+    
+    <md-button class="md-fab md-fab-pos-3 md-mini fabButtonslideInUpEntry-3" ng-if="showMiniButton" ng-click="">
+        <md-tooltip id="tooltip_3" md-visible="tooltip3">
+                RATE
+        </md-tooltip>
+            <i class="ion-ios-star"></i>
+    </md-button>
+    
+    <md-button class="md-fab md-fab-pos-2 md-mini fabButtonslideInUpEntry-2" ng-if="showMiniButton" ng-click="">
+        <md-tooltip id="tooltip_2" md-visible="tooltip2">
+                EXIT
+        </md-tooltip>
+            <i class="ion-power"></i>
+    </md-button>
+    
+    <md-button class="md-fab md-fab-pos-1 md-mini fabButtonslideInUpEntry-1" ng-if="showMiniButton" ng-click="settingsPage()">
+        <md-tooltip id="tooltip_1" md-visible="tooltip1">
+                SETTINGS
+        </md-tooltip>
+            <i class="ion-settings"></i>
+    </md-button>
+    
+    <md-button class="md-fab md-fab-bottom-right md-primary floatButtonPrimarySpecs fabButtonslideInUpEntry" ng-class="{'rotateButton': showMiniButton}" id="fab" ng-click="showMini()" ng-show="showMainFab">
+            <i class="ion-plus-round"></i>
+    </md-button>
+    
+</ion-view>

@@ -1,0 +1,32 @@
+
+<!-- side menu is defined here -->
+<ion-side-menus>
+    <!-- main menu content -->
+    <ion-nav-bar  class="bar bar-header bar-positive" animation="no-animation">
+    </ion-nav-bar>
+
+    
+    <ion-pane drawer-menu-content>
+        <ion-nav-view name="mainContent" animation="slide-left-right-ios7">
+        </ion-nav-view>
+    </ion-pane>
+
+    <!-- Drawer-->
+    <drawer side="left" on-drag-left="closeMenu()">
+        <ion-view>
+            <ion-content padding="false" scroll="false" has-bouncing="false" class="header-menu">
+                <div id="drawerTop"></div>
+                <div class="list">
+
+                    <ion-item class="item-icon-left drawerList" menu-and-drawer-close ng-repeat="list in homeList"  ui-sref="app.{{list.state}}" ui-sref-active="activated">
+                        <i class="{{list.icon}}"></i>
+                        <h2 class="mainNavList"> {{list.title}}  </h2>
+                    </ion-item>
+                    
+                </div>
+
+            </ion-content>
+        </ion-view>
+    </drawer>
+
+</ion-side-menus>

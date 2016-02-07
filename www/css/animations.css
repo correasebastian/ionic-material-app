@@ -1,0 +1,327 @@
+/*zoomIn animation*/
+.fabButtonAnimZoomIn{
+    -webkit-transition: all ease 0.45s!important;
+    transition: all ease 0.45s!important;
+    opacity: 1!important;
+}
+/*floating action button animation on ng-show*/
+.fabButtonAnimZoomIn.ng-hide-remove,.fabButtonAnimZoomIn.ng-hide-remove.ng-hide-remove-active{
+    opacity: 0!important;
+    -webkit-transform: scale3d(.3, .3, .3)!important;
+    transform: scale3d(.3, .3, .3)!important;
+}
+/*floating action button animation on ng-hide*/
+.fabButtonAnimZoomIn.ng-hide-add ,.fabButtonAnimZoomIn.ng-hide-add.ng-hide-add-active{
+   opacity: 0!important; 
+   -webkit-transition: all linear 0.01s!important;
+   transition: all linear 0.01s!important;
+}
+
+/*rotateIn animation*/
+.rotateButton{
+    -webkit-animation: rotateIn 0.45s ease-in!important; 
+    animation: rotateIn 0.45s ease-in!important;
+    opacity: 1!important;
+    
+    -ms-transform: rotate(-225deg)!important; /* IE 9 */
+    -webkit-transform: rotate(-225deg)!important; /* Chrome, Safari, Opera */
+    transform: rotate(-225deg)!important;
+    
+    box-shadow: 0 0 0 0 transparent !important;
+    -webkit-box-shadow: 0 0 0 0 transparent !important;
+}
+@-webkit-keyframes rotateIn {
+    0% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+    }
+    100% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1,-225deg);
+        transform: rotate3d(0, 0, 1,-225deg);
+    }
+}
+@keyframes rotateIn {
+    0% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+    }
+    100% {
+        -webkit-transform-origin: center;
+        transform-origin: center;  
+        -webkit-transform: rotate3d(0, 0, 1,-225deg);
+        transform: rotate3d(0, 0, 1,-225deg);
+    }
+}
+
+/*Activated state Floating action button Box shadow*/
+.fabButtonShadowActive.activated{
+    box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.19)!important;
+    -webkit-box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.19)!important;
+    -webkit-transform: translate3d(0, 0, 1px)!important;
+    transform: translate3d(0, 0, 1px)!important;
+}
+
+/*Swing animation Activated mini floating action button */
+.md-mini.activated{
+    -webkit-animation: swing 0.65s ease-in!important; 
+    animation: swing 0.65s ease-in!important;
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 30deg);
+    transform: rotate3d(0, 0, 1, 20deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -30deg);
+    transform: rotate3d(0, 0, 1, -20deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+   20% {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 30deg);
+    transform: rotate3d(0, 0, 1, 20deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -30deg);
+    transform: rotate3d(0, 0, 1, -20deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+/*Activated state Floating action button Scale*/
+.fabButtonScaleActive.activated{
+    transform: scale(1.1)!important;
+    -webkit-transform: scale(1.1)!important;
+}
+
+/*Cards Normal Style*/
+.list.card{
+    box-shadow: 1px 3px 8px #424242!important;
+    -webkit-box-shadow: 1px 3px 8px #424242!important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    -webkit-transition: 0.1s linear !important;
+    transition: 0.1s linear !important;
+    -webkit-transition-property: -webkit-transform, all !important;
+    transition-property: transform, all !important;
+}
+/*Active State of Cards*/
+.list.card.activated{
+     box-shadow: 0px 8px 17px #424242!important;
+    -webkit-box-shadow: 0px 8px 17px #424242!important;
+    -webkit-transform: translate3d(0, 0, 1px)  !important;
+    transform: translate3d(0, 0, 1px) !important;
+}
+
+/*Scale-in Animation Modal*/
+.scale-in {
+	-webkit-transform: scale(0.0);
+  	transform: scale(0.0);
+  	opacity: 0;
+}
+.scale-in.ng-enter,
+.scale-in > .ng-enter {
+	-webkit-transition: all cubic-bezier(.1, .7, .1, 1) 450ms;
+ 	transition: all cubic-bezier(.1, .7, .1, 1) 450ms;
+}
+.scale-in.ng-enter-active,
+.scale-in > .ng-enter-active {
+	-webkit-transform: scale(1);
+ 	transform: scale(1);
+	opacity: 1;
+}
+.scale-in.ng-leave,
+.scale-in > .ng-leave {
+	-webkit-transition: all ease-in-out 250ms;
+ 	transition: all ease-in-out 250ms;
+}
+
+/*slideInEntry animation -4*/
+.fabButtonslideInUpEntry-4.ng-enter{
+    -webkit-transition: all ease-out 0.25s;
+    transition: all ease-out 0.25s;
+}
+.fabButtonslideInUpEntry-4.ng-leave{    
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    -webkit-transition-delay: 0.6s!important;
+    transition-delay: 0.6s!important;
+}
+/*floating action button animation on remove*/
+.fabButtonslideInUpEntry-4.ng-leave.ng-leave-active{
+    -webkit-transform: translateY(600%)!important;
+    -ms-transform: translateY(600%)!important;
+    transform: translateY(600%)!important;   
+}
+.fabButtonslideInUpEntry-4.ng-leave{
+    visibility: visible!important;
+}
+
+/*floating action button animation on show*/
+.fabButtonslideInUpEntry-4.ng-enter{
+    opacity: 0!important;
+}
+.fabButtonslideInUpEntry-4.ng-enter.ng-enter-active{
+    -webkit-transform: translateY(650%)!important;
+    -ms-transform: translateY(650%)!important;
+    transform: translateY(650%)!important;
+}
+
+/*slideInEntry animation -3*/
+.fabButtonslideInUpEntry-3.ng-enter{
+    -webkit-transition: all ease-out 0.25s;
+    transition: all ease-out 0.25s;
+    -webkit-transition-delay: 0.25s!important;
+    transition-delay: 0.25s!important;
+}
+.fabButtonslideInUpEntry-3.ng-leave{
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    -webkit-transition-delay: 0.4s!important;
+    transition-delay: 0.4s!important;
+}
+/*floating action button animation on remove*/
+.fabButtonslideInUpEntry-3.ng-leave.ng-leave-active{
+    -webkit-transform: translateY(400%)!important;
+    -ms-transform: translateY(400%)!important;
+    transform: translateY(400%)!important;   
+}
+.fabButtonslideInUpEntry-3.ng-leave{
+    visibility: visible!important;
+}
+
+/*floating action button animation on show*/
+.fabButtonslideInUpEntry-3.ng-enter{
+    opacity: 0!important;
+}
+.fabButtonslideInUpEntry-3.ng-enter.ng-enter-active{
+    -webkit-transform: translateY(450%)!important;
+    -ms-transform: translateY(450%)!important;
+    transform: translateY(450%)!important;
+}
+
+/*slideInEntry animation -2*/
+.fabButtonslideInUpEntry-2.ng-enter{
+    -webkit-transition: all ease-out 0.25s;
+    transition: all ease-out 0.25s;
+    -webkit-transition-delay: 0.5s!important;
+    transition-delay: 0.5s!important;
+}
+.fabButtonslideInUpEntry-2.ng-leave{
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    -webkit-transition-delay: 0.2s!important;
+    transition-delay: 0.2s!important;
+}
+/*floating action button animation on remove*/
+.fabButtonslideInUpEntry-2.ng-leave.ng-leave-active{
+    -webkit-transform: translateY(200%)!important;
+    -ms-transform: translateY(200%)!important;
+    transform: translateY(200%)!important;   
+}
+.fabButtonslideInUpEntry-2.ng-leave{
+    visibility: visible!important;
+}
+
+/*floating action button animation on show*/
+.fabButtonslideInUpEntry-2.ng-enter{
+    opacity: 0!important;
+}
+.fabButtonslideInUpEntry-2.ng-enter.ng-enter-active{
+    -webkit-transform: translateY(250%)!important;
+    -ms-transform: translateY(250%)!important;
+    transform: translateY(250%)!important;
+}
+
+/*slideInEntry animation -1*/
+.fabButtonslideInUpEntry-1.ng-enter{
+    -webkit-transition: all ease-out 0.25s;
+    transition: all ease-out 0.25s;
+    -webkit-transition-delay: 0.75s!important;
+    transition-delay: 0.75s!important;
+}
+.fabButtonslideInUpEntry-1.ng-leave{
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+}
+/*floating action button animation on remove*/
+.fabButtonslideInUpEntry-1.ng-leave.ng-leave-active{
+    -webkit-transform: translateY(100%)!important;
+    -ms-transform: translateY(100%)!important;
+    transform: translateY(100%)!important;   
+}
+.fabButtonslideInUpEntry-1.ng-leave{
+    visibility: visible!important;
+}
+
+/*floating action button animation on show*/
+.fabButtonslideInUpEntry-1.ng-enter{
+    opacity: 0!important;
+}
+.fabButtonslideInUpEntry-1.ng-enter.ng-enter-active{
+    -webkit-transform: translateY(150%)!important;
+    -ms-transform: translateY(150%)!important;
+    transform: translateY(150%)!important;
+}
+
+/*slideInEntry animation*/
+.fabButtonslideInUpEntry{
+    -webkit-transition: all ease 0.35s!important;
+    transition: all ease 0.35s!important;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+/*floating action button animation on ng-show*/
+.fabButtonslideInUpEntry.ng-hide-remove,.fabButtonslideInUpEntry.ng-hide-remove.ng-hide-remove-active{
+    -webkit-transform: translateY(200%)!important;
+    -ms-transform: translateY(200%)!important;
+    transform: translateY(200%)!important;
+    visibility: visible!important;
+}
+/*floating action button animation on ng-hide*/
+.fabButtonslideInUpEntry.ng-hide-add ,.fabButtonslideInUpEntry.ng-hide-add.ng-hide-add-active{
+    -webkit-transition: all linear 0.1s!important;
+    transition: all linear 0.1s!important;
+    visibility: hidden!important;
+    -webkit-transform: translateY(100%)!important;
+    -ms-transform: translateY(100%)!important;
+    transform: translateY(100%)!important;
+}
